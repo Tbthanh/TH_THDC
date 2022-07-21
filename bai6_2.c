@@ -42,13 +42,18 @@ int main()
             s[i]=0;
         }
     }
-    lens= j;
+    lens = j;
     //xu ly trong cau
     for(i=0;i<lens;i++)
     {
-        if(s[i]==32)
+        if((s[i]==32)&&(s[i+1]=32))
         {
-            //haha
+            for(j = i; j < lens; j++) 
+            {
+				s[j] = s[j + 1];
+			}
+			i--;
+			lens--;
         }
     }
 
