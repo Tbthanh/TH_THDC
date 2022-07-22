@@ -30,25 +30,26 @@ int main()
     lens-=j;
     
     //xu ly cuoi cau
-    for (i = lens-1; i >= 0; i--)
-    {
-        if(s[i]!=32)
-        {
-            j=i;
-            break;
-        }
-        else
-        {
-            s[i]=0;
-        }
-    }
-    lens = j;
+    // for (i = lens-1; i >= 0; i--)
+    // {
+    //     if(s[i]!=32)
+    //     {
+    //         j=i;
+    //         break;
+    //     }
+    //     else
+    //     {
+    //         s[i]=0;
+    //     }
+    // }
+    // lens = j;
+
     //xu ly trong cau
     for(i=0;i<lens;i++)
     {
         if((s[i]==32)&&(s[i+1]=32))
         {
-            for(j = i; j < lens; j++) 
+            for(j = i+1; j < lens; j++) 
             {
 				s[j] = s[j + 1];
 			}
