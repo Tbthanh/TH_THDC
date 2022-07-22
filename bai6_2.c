@@ -30,16 +30,15 @@ int main()
     printf("%d\n",strlen(s));
     
     //xu ly cuoi cau
-    for (i = lens-1; i >= 0; i--)
+    for (i = lens; i >= 0; i--)
     {
-        if((s[i]!=32)&&(s[i]!=10))
+        if((s[i]==' ')||(s[i]=='\n')||(s[i]=='\0'))
         {
-            j=i;
-            break;
+            s[i]=0;
         }
         else
         {
-            s[i]=0;
+            break;;
         }
     }
     lens = j;
@@ -61,6 +60,11 @@ int main()
     for (i=0;i<strlen(s);i++)
     {
         printf("%d ",(int)(s[i]));
+    }
+    printf("\n");
+    for (i=0;i<strlen(s);i++)
+    {
+        printf("%c",s[i]);
     }
     return 0;
 }
